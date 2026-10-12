@@ -1,0 +1,152 @@
+:root {
+    --font-color: rgb(53, 3, 111);    
+    --background-color: rgb(202, 195, 221); 
+}
+
+html {
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding: 0;
+    color: var(--font-color);
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    background-color: var(--background-color);
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#hayden {
+    text-align: center;
+    font-size: 2rem;
+}
+
+ul {
+    background-color: var(--font-color);
+    display: inline-flex;
+    justify-content: space-around;
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li button {
+    cursor: pointer;
+    border: none;
+    color: var(--background-color);
+    background-color: var(--font-color);
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+
+.animate {
+  animation-duration: 0.5s;
+  animation-name: animate-fade;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes animate-fade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.section-title {
+    padding: 0;
+    margin: 0;
+}
+
+#about, #projects, #contact {
+    display: flex;
+    font-size: 1.2rem;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#about-me-p {
+    padding: 2%;
+    text-align: center;
+}
+
+#freecodecamp-link {
+    color: var(--font-color);
+}
+
+#projects, #contact {
+    display: none;
+}
+
+#projects-intro {
+    text-align: center;
+}
+
+#project-screenshots {
+    justify-content: space-around;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.project-link {
+    cursor: pointer;
+    width: 30%;
+    height: 100%;
+}
+
+.project-screenshot {
+    height: 100%;
+    width: 100%;
+}
+#project-description {
+    text-align: center;
+}
+
+.zoom:hover {
+  transition: transform .2s;
+  transform: scale(1.1);
+}
+
+#contact-me {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    #hayden {
+        font-size: 3rem;
+        padding: 0;
+    }
+
+    ul li button {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    #about, #projects, #contact {
+        font-size: 1.5rem;
+    }
+    
+    #project-screenshots {
+        height: 60%;
+    }
+}
